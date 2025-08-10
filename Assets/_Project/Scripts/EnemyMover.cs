@@ -4,7 +4,7 @@ public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
 
-    void Update()
+    private void Update()
     {
         MoveForward();
     }

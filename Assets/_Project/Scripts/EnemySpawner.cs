@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private Transform[] _spawnPoints;
 
-    void Start()
+    private void Start()
     {
         StartCoroutine(SpawnWithDelay());
     }
@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
     {
         var waitForTwoSeconds = new WaitForSeconds(2);
 
-        while (true)
+        while (enabled)
         {
             yield return waitForTwoSeconds;
 
